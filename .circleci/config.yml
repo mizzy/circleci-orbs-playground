@@ -3,7 +3,20 @@ version: 2.1
 orbs:
   shellcheck: circleci/shellcheck@1.3.10
 
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.5
+    steps:
+      - checkout
+      - run:
+          command: |
+            ls aaaaa
+            exit 0
+          
+        
 workflows:
   shellcheck:
     jobs:
       - shellcheck/check
+      - build
