@@ -11,8 +11,7 @@ jobs:
       - checkout
       - run:
           command: |
-            ls aaaaa
-            exit 0
+            ls aaaaa || exit 0
           
         
 workflows:
