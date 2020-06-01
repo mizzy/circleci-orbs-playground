@@ -6,13 +6,16 @@ orbs:
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.5
+      - image: hashicorp/terraform:0.12.10
     steps:
       - checkout
       - run:
           command: |
-            ls aaaaa || exit 0
-          
+            name='<h1>takuya</h1>'
+            if [[ $name =~ takuya ]] ;
+            then
+            echo ${BASH_REMATCH[@]}
+            fi          
         
 workflows:
   shellcheck:
