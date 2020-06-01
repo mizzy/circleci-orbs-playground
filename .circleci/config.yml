@@ -11,6 +11,7 @@ jobs:
       - checkout
       - run:
           command: |
+            apk add bash
             name='<h1>takuya</h1>'
             if [[ $name =~ takuya ]] ;
             then
